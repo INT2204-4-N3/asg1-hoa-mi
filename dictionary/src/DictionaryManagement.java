@@ -1,4 +1,4 @@
-package dictionary;
+//package dictionary;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class DictionaryManagement {
 
-    private dictionary.Dictionary sach = new dictionary.Dictionary();
+    private Dictionary sach = new Dictionary();
 
     // gọi lại từ điển
-    public dictionary.Dictionary getDictionary()
+    public Dictionary getDictionary()
     {
         return sach;
     }
-    public void setDictonary(dictionary.Dictionary tudien)
+    public void setDictonary(Dictionary tudien)
     {
         this.sach = sach;
     }
@@ -51,7 +51,7 @@ public class DictionaryManagement {
     }
     public void insertWord()//xử lý hàm chèn thêm từ
     {
-        dictionary.Word wordInsert = new dictionary.Word();
+        Word wordInsert = new Word();
         Scanner choose = new Scanner(System.in);
         System.out.print("Từ thêm vào: ");
         wordInsert.setWordTarget(choose.nextLine());
@@ -59,7 +59,7 @@ public class DictionaryManagement {
         wordInsert.setWordExplain(choose.nextLine());
         boolean checkInsert = true;
 
-        for ( dictionary.Word word : this.getDictionary().getWord() )
+        for ( Word word : this.getDictionary().getWord() )
         {
             if ( word.getWordTarget().equals(wordInsert.getWordTarget()))//từ mới thêm trùng với từ mới có sẵn
             {
@@ -83,7 +83,7 @@ public class DictionaryManagement {
         int num = 0;
         boolean check = false;
 
-        for(  dictionary.Word word : this.getDictionary().getWord() )
+        for( Word word : this.getDictionary().getWord() )
         {
             if ( word.getWordTarget().contains(keyWord) && word.getWordTarget().indexOf(keyWord) == 0 )
             {
@@ -105,7 +105,7 @@ public class DictionaryManagement {
         String delWord = choose.nextLine();
         boolean checkDelete = false;
 
-        for ( dictionary.Word word : this.getDictionary().getWord() )
+        for (Word word : this.getDictionary().getWord() )
         {
             if ( word.getWordTarget().equals(delWord))//neu tu có sẵn có trong danh sách
             {
@@ -136,7 +136,7 @@ public class DictionaryManagement {
                 String wordNeedFix1;
                 wordNeedFix1 = choose.nextLine();
 
-                for( dictionary.Word word : this.getDictionary().getWord() )
+                for( Word word : this.getDictionary().getWord() )
                 {
                     if ( word.getWordTarget().equals(wordNeedFix1) )//từ cần sửa nằm trong danh sách từ đã có
                     {
@@ -157,7 +157,7 @@ public class DictionaryManagement {
                 String wordNeedFix2;//khai bao tu can sửa
                 wordNeedFix2 = choose.nextLine();
 
-                for( dictionary.Word word : this.getDictionary().getWord() )
+                for(Word word : this.getDictionary().getWord() )
                 {
                     if ( word.getWordTarget().equals(wordNeedFix2) )
                     {
@@ -181,7 +181,7 @@ public class DictionaryManagement {
     {
         System.out.println("\t STT \t| \t\t English \t| VietNamese \t\t");
         int num = 1;
-        for (dictionary.Word word : this.getDictionary().getWord())
+        for (Word word : this.getDictionary().getWord())
         {
             System.out.println(num + "\t| " + word.getWordTarget() + "\t\t| " + word.getWordExplain() + "\t\t");
             num++;
@@ -199,7 +199,7 @@ public class DictionaryManagement {
 
         boolean checkFinded = false;
 
-        for(dictionary.Word word : this.getDictionary().getWord())
+        for(Word word : this.getDictionary().getWord())
         {
             int numW=1;
             if ( word.getWordTarget().equals(keyWord) )
@@ -226,7 +226,7 @@ public class DictionaryManagement {
                 word_target = oneLine.substring(0, oneLine.indexOf("\t"));
                 word_explain = oneLine.substring(oneLine.indexOf("\t") + 1);
 
-                dictionary.Word word = new dictionary.Word();
+                Word word = new Word();
                 word.setWordTarget(word_target);
                 word.setWordExplain(word_explain);
                 this.getDictionary().getWord().add(word);

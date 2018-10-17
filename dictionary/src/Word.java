@@ -1,4 +1,4 @@
-package dictionary;
+//package dictionary;
 public class Word {
     private String wordTarget;//tạo thuộc tính từ mới
     private String wordExplain;//tạo thuộc tính nghĩa của từ

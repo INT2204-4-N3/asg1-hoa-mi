@@ -1,10 +1,10 @@
-package dictionary;
+//package dictionary;
 import java.util.ArrayList;
 
 public class Dictionary {
-    private ArrayList<dictionary.Word> word = new ArrayList<dictionary.Word>();
+    private ArrayList<Word> word = new ArrayList<Word>();
     // lưu trữ mảng word
-    public ArrayList<dictionary.Word> getWord()
+    public ArrayList<Word> getWord()
     {
         return word;
     }

@@ -1,7 +1,7 @@
-package dictionary;
+//package dictionary;
 public class DictionaryCommandline {
 
-    public dictionary.DictionaryManagement dictionaryManagement = new dictionary.DictionaryManagement();
+    public DictionaryManagement dictionaryManagement = new DictionaryManagement();
 
 
     public void showMenu()
