@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="644.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="631.0" fitWidth="833.0" layoutX="-91.0" layoutY="14.0">
+         <image>
+            <Image url="@../image/gg.jpg" />
+         </image></ImageView>
+      <WebView fx:id="webViewExplain" fontSmoothingType="GRAY" layoutX="339.0" layoutY="136.0" opacity="0.46" prefHeight="402.0" prefWidth="391.0">
+         <effect>
+            <Blend />
+         </effect></WebView>
+      <ListView fx:id="listView" fixedCellSize="29.0" layoutX="64.0" layoutY="136.0" onMouseClicked="#handleClickListView" opacity="0.55" prefHeight="402.0" prefWidth="262.0" snapToPixel="false" />
+      <TextField fx:id="Input" layoutX="64.0" layoutY="92.0" onKeyReleased="#update" opacity="0.78" prefHeight="37.0" prefWidth="262.0" promptText="Search" />
+      <Button layoutX="280.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#handleClickListViewSearch" opacity="0.89" prefHeight="37.0" prefWidth="45.0" />
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="288.0" layoutY="97.0" onMouseClicked="#handleClickListViewSearch" opacity="0.84">
+         <image>
+            <Image url="@../image/search.png" />
+         </image></ImageView>
+      <Label layoutX="382.0" layoutY="191.0" />
+      <Button layoutX="430.0" layoutY="97.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" textAlignment="CENTER" />
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="433.0" layoutY="97.0" onMouseClicked="#handleClickListView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/megaphone.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="238.0" layoutY="14.0" prefHeight="70.0" prefWidth="288.0" text="HỌA MY DICTIONARY" textFill="#d61609">
+         <font>
+            <Font name="Jokerman" size="26.0" />
+         </font></Label>
+      <Button layoutX="386.0" layoutY="97.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" />
+      <Button layoutX="339.0" layoutY="97.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" />
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="342.0" layoutY="97.0" onMouseClicked="#handleClickListView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/sickle-and-hammer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="394.0" layoutY="102.0" onMouseClicked="#handleClickListView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/rubbish-bin.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="471.0" layoutY="99.0" prefHeight="28.0" prefWidth="101.0" promptText="Word_Target" />
+      <TextField layoutX="578.0" layoutY="98.0" prefHeight="28.0" prefWidth="101.0" promptText="Word_Explain" />
+      <Button layoutX="689.0" layoutY="98.0" mnemonicParsing="false" onMouseMoved="#update" prefHeight="28.0" prefWidth="34.0" text="Ok" />
+   </children>
+</Pane>
